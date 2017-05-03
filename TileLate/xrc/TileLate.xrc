@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource version="2.3.0.1" xmlns="http://www.wxwidgets.org/wxxrc">
+    <object class="wxFrame" name="MAIN_FRAME">
+        <style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxMINIMIZE_BOX|wxMAXIMIZE_BOX|wxCLOSE_BOX</style>
+        <size>400,300</size>
+        <title>TileLate</title>
+        <centered>1</centered>
+        <object class="wxBoxSizer">
+            <orient>wxHORIZONTAL</orient>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <option>1</option>
+                <object class="unknown" name="SPRITE">
+                    <size>100,100</size>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <option>1</option>
+                <object class="wxGenericDirCtrl" name="DIRS">
+                    <size>100,100</size>
+                    <filter>All files (*.*)|*.*</filter>
+                    <defaultfilter>0</defaultfilter>
+                </object>
+            </object>
+        </object>
+        <object class="wxMenuBar" name="ID_MENUBAR">
+            <object class="wxMenu">
+                <label>File</label>
+                <object class="wxMenuItem" name="ID_MENUITEM2">
+                    <label>New Project...</label>
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM4">
+                    <label>Open Project...</label>
+                </object>
+                <object class="separator">
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM5">
+                    <label>Save Project</label>
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM6">
+                    <label>Save Project as...</label>
+                </object>
+                <object class="separator">
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM3">
+                    <label>Close</label>
+                </object>
+            </object>
+            <object class="wxMenu">
+                <label>Sheet</label>
+                <object class="wxMenuItem" name="EXPORT">
+                    <label>Export...</label>
+                </object>
+            </object>
+            <object class="wxMenu">
+                <label>Operation</label>
+                <object class="wxMenuItem" name="ID_MENUITEM">
+                    <label>Cut</label>
+                </object>
+                <object class="wxMenuItem" name="PACK">
+                    <label>Pack</label>
+                </object>
+                <object class="wxMenuItem" name="COMPRESS">
+                    <label>Compress</label>
+                </object>
+            </object>
+        </object>
+    </object>
+</resource>
