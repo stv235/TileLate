@@ -19,6 +19,11 @@ MainFrame::MainFrame()
 	// Events
 	Bind(wxEVT_DIRCTRL_FILEACTIVATED, &MainFrame::onAddFile, this, XRCID("DIRS"));
 	Bind(wxEVT_MENU, &MainFrame ::onClickPack, this, XRCID("PACK"));
+	Bind(wxEVT_MENU, &MainFrame::onClickExport, this, XRCID("EXPORT"));
+
+	auto picturesDir = wxStandardPaths::Get().GetUserDir(wxStandardPathsBase::Dir_Pictures);
+
+	m_dirsCtrl->SetPath(picturesDir);
 
 	for (auto& sprite : m_spriteSheet)
 	{
@@ -75,6 +80,9 @@ void MainFrame::onAddFile(wxTreeEvent& evt)
 	if (img.LoadFile(path))
 	{
 		m_spriteSheet.push_back(std::make_pair(wxPoint{}, img));
+
+		pack();
+
 		m_spriteCtrl->setSpriteSheet(m_spriteSheet);
 	}
 	else
@@ -113,4 +121,46 @@ void MainFrame::pack()
 void MainFrame::onClickPack(wxCommandEvent& evt)
 {
 	pack();
+}
+
+void MainFrame::onClickExport(wxCommandEvent& evt)
+{
+	wxFileDialog dlg(this);
+	dlg.SetWildcard("PNG files (*.png)|*.png");
+	dlg.SetWindowStyle(wxFD_SAVE | wxFD_OVERWRITE_PROMPT | wxFD_PREVIEW);
+
+	if (dlg.ShowModal() == wxID_OK)
+	{
+		exportSheet(dlg.GetPath());
+	}
+}
+
+void MainFrame::exportSheet(const wxString& path)
+{
+	if (!m_spriteSheet.empty())
+	{
+		wxSize textureSize;
+
+		for (const auto& frame : m_spriteSheet)
+		{
+			auto bottomRight = frame.first + frame.second.GetSize();
+
+			textureSize.x = std::max(textureSize.x, bottomRight.x);
+			textureSize.y = std::max(textureSize.y, bottomRight.y);
+		}
+
+		wxImage outImg(textureSize);
+		outImg.SetAlpha();
+
+		for (const auto& frame : m_spriteSheet)
+		{
+			outImg.Paste(frame.second, frame.first.x, frame.first.y);
+		}
+
+		outImg.SaveFile(path, wxBITMAP_TYPE_PNG);
+	}
+	else
+	{
+		wxMessageBox("The current sheet is empty");
+	}
 }

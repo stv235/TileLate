@@ -622,9 +622,9 @@
                 <string name="proxy-Id name">"ID_MENUITEM"</string>
                 <long name="proxy-Id value">10004</long>
                 <string name="proxy-Kind">"Normal"</string>
-                <string name="proxy-Label">"Cut"</string>
+                <string name="proxy-Label">"Slice"</string>
                 <string name="proxy-Platform">"&lt;Any platform&gt;"</string>
-                <string name="title">"Cut: ID_MENUITEM"</string>
+                <string name="title">"Slice: ID_MENUITEM"</string>
                 <long name="title-mode">0</long>
                 <string name="type">"dialog-control-document"</string>
               </document>
@@ -664,9 +664,72 @@
                 <string name="proxy-Id name">"COMPRESS"</string>
                 <long name="proxy-Id value">10011</long>
                 <string name="proxy-Kind">"Normal"</string>
-                <string name="proxy-Label">"Compress"</string>
+                <string name="proxy-Label">"Remove borders"</string>
                 <string name="proxy-Platform">"&lt;Any platform&gt;"</string>
-                <string name="title">"Compress: COMPRESS"</string>
+                <string name="title">"Remove borders: COMPRESS"</string>
+                <long name="title-mode">0</long>
+                <string name="type">"dialog-control-document"</string>
+              </document>
+              <document>
+                <string name="proxy-type">"wbMenuItemProxy"</string>
+                <string name="filename">""</string>
+                <string name="icon-name">"menuitem"</string>
+                <long name="is-transient">0</long>
+                <long name="locked">0</long>
+                <long name="owns-file">1</long>
+                <string name="proxy-Bitmap">""</string>
+                <string name="proxy-Bitmap unchecked">""</string>
+                <bool name="proxy-Checked">0</bool>
+                <bool name="proxy-Enabled">1</bool>
+                <string name="proxy-Help text">""</string>
+                <string name="proxy-Id name">"ID_MENUITEM1"</string>
+                <long name="proxy-Id value">10013</long>
+                <string name="proxy-Kind">"Normal"</string>
+                <string name="proxy-Label">"Make background transparent"</string>
+                <string name="proxy-Platform">"&lt;Any platform&gt;"</string>
+                <string name="title">"Make background transparent: ID_MENUITEM1"</string>
+                <long name="title-mode">0</long>
+                <string name="type">"dialog-control-document"</string>
+              </document>
+              <document>
+                <string name="proxy-type">"wbMenuItemProxy"</string>
+                <string name="filename">""</string>
+                <string name="icon-name">"menuitem"</string>
+                <long name="is-transient">0</long>
+                <long name="locked">0</long>
+                <long name="owns-file">1</long>
+                <string name="proxy-Bitmap">""</string>
+                <string name="proxy-Bitmap unchecked">""</string>
+                <bool name="proxy-Checked">0</bool>
+                <bool name="proxy-Enabled">1</bool>
+                <string name="proxy-Help text">""</string>
+                <string name="proxy-Id name">"ID_MENUITEM7"</string>
+                <long name="proxy-Id value">10014</long>
+                <string name="proxy-Kind">"Normal"</string>
+                <string name="proxy-Label">"Export"</string>
+                <string name="proxy-Platform">"&lt;Any platform&gt;"</string>
+                <string name="title">"Export: ID_MENUITEM7"</string>
+                <long name="title-mode">0</long>
+                <string name="type">"dialog-control-document"</string>
+              </document>
+              <document>
+                <string name="proxy-type">"wbMenuItemProxy"</string>
+                <string name="filename">""</string>
+                <string name="icon-name">"menuitem"</string>
+                <long name="is-transient">0</long>
+                <long name="locked">0</long>
+                <long name="owns-file">1</long>
+                <string name="proxy-Bitmap">""</string>
+                <string name="proxy-Bitmap unchecked">""</string>
+                <bool name="proxy-Checked">0</bool>
+                <bool name="proxy-Enabled">1</bool>
+                <string name="proxy-Help text">""</string>
+                <string name="proxy-Id name">"ID_MENUITEM8"</string>
+                <long name="proxy-Id value">10015</long>
+                <string name="proxy-Kind">"Normal"</string>
+                <string name="proxy-Label">"Rename images/subimages"</string>
+                <string name="proxy-Platform">"&lt;Any platform&gt;"</string>
+                <string name="title">"Rename images/subimages: ID_MENUITEM8"</string>
                 <long name="title-mode">0</long>
                 <string name="type">"dialog-control-document"</string>
               </document>

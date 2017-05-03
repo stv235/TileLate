@@ -14,7 +14,8 @@ private:
 	void onAddFile(wxTreeEvent& evt);
 	void pack();
 	void onClickPack(wxCommandEvent& evt);
-
+	void onClickExport(wxCommandEvent& evt);
+	void exportSheet(const wxString& path);
 	void cut(wxImage& img);
 
 private:

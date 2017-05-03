@@ -148,7 +148,7 @@ public:
 		{
 			int a = pack(i);
 
-			if (a != -1 && a < bestA)
+			if (a != -1 && a <= bestA)
 			{
 				bestI = i;
 				bestA = a;
@@ -156,16 +156,6 @@ public:
 		}
 
 		pack(bestI);
-
-		/*
-		int x = 0;
-
-		for (auto& r : m_rects)
-		{
-			r.x = x;
-			x += r.w;
-		}
-		*/
 	}
 };
 

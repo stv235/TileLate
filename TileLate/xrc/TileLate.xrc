@@ -58,13 +58,22 @@
             <object class="wxMenu">
                 <label>Operation</label>
                 <object class="wxMenuItem" name="ID_MENUITEM">
-                    <label>Cut</label>
+                    <label>Slice</label>
                 </object>
                 <object class="wxMenuItem" name="PACK">
                     <label>Pack</label>
                 </object>
                 <object class="wxMenuItem" name="COMPRESS">
-                    <label>Compress</label>
+                    <label>Remove borders</label>
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM1">
+                    <label>Make background transparent</label>
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM7">
+                    <label>Export</label>
+                </object>
+                <object class="wxMenuItem" name="ID_MENUITEM8">
+                    <label>Rename images/subimages</label>
                 </object>
             </object>
         </object>
